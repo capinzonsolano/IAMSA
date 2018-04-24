@@ -9,19 +9,31 @@ html, body {
 
 body {
   font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #000;
 }
 
 footer {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .contenedor {
@@ -33,13 +45,20 @@ footer {
   width: 100%;
   position: fixed;
   z-index: 10;
-  box-shadow: 0 3px 3px rgba(59, 65, 60, 0.5)
+  -webkit-box-shadow: 0 3px 3px rgba(59, 65, 60, 0.5);
+          box-shadow: 0 3px 3px rgba(59, 65, 60, 0.5)
 }
 
 .contenedorMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%
 }
 
@@ -56,13 +75,20 @@ footer {
 }
 
 .menu>li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 
 .menu>li:hover {
   background: rgb(68, 151, 49);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
@@ -73,6 +99,7 @@ footer {
   background-position: center;
   height: 60px;
   width: 100%;
+  -webkit-transition: 1s ease;
   transition: 1s ease
 }
 
@@ -86,8 +113,19 @@ footer {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  animation-name: cambio;
-  animation-duration: 3s
+  -webkit-animation-name: cambio;
+          animation-name: cambio;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s
+}
+
+@-webkit-keyframes cambio {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes cambio {
@@ -101,6 +139,7 @@ footer {
 
 .menu>li:hover>.subMenu {
   display: grid;
+  -webkit-transition: 1s;
   transition: 1s
 }
 
@@ -132,9 +171,15 @@ footer {
 }
 
 .subMenu>li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 70px;
   border-right: 1px solid rgb(68, 151, 49);
   border-top: 1px solid rgb(68, 151, 49)
@@ -142,6 +187,7 @@ footer {
 
 .subMenu li:hover {
   background: rgba(68, 151, 49, 1);
+  -webkit-transition: .5s;
   transition: .5s
 }
 
@@ -152,9 +198,16 @@ footer {
 .subMenu>li>a {
   font-size: 12px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 
 .subMenu>li>a>span {
@@ -172,7 +225,8 @@ footer {
 }
 
 .subMenuContenido li {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   list-style: none;
   width: 40%;
   border-right: 1px solid rgb(68, 151, 49);
@@ -190,7 +244,8 @@ footer {
 
 .subMenuArticulo {
   display: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 40%;
@@ -219,9 +274,15 @@ footer {
 }
 
 .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .items:nth-of-type(1) {
@@ -250,13 +311,19 @@ footer {
 }
 
 .contenedorFooter a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 
 .main {
   background: rgb(130, 205, 122);
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .portada {
@@ -272,17 +339,33 @@ footer {
 
 .cubierta {
   background: rgba(255, 255, 255, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .contenedorMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 100px;
 }
 
@@ -299,7 +382,8 @@ footer {
   background: rgba(68, 150, 49, 0.7);
   padding: 20px 40px;
   color: white;
-  box-shadow: 5px 5px 3px rgba(50, 50, 50, .5)
+  -webkit-box-shadow: 5px 5px 3px rgba(50, 50, 50, .5);
+          box-shadow: 5px 5px 3px rgba(50, 50, 50, .5)
 }
 
 .animacion {
@@ -319,10 +403,23 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 1;
-  animation-name: mover;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: mover;
+          animation-name: mover;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes mover {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
 }
 
 @keyframes mover {
