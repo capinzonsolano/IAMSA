@@ -80,6 +80,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 100%;
+  padding: 0;
 }
 
 .menu a {
@@ -156,6 +157,7 @@ h2 {
   display: none;
   position: absolute;
   top: 100%;
+  padding: 0;
 }
 
 .subMenuServicios {
@@ -207,6 +209,7 @@ h2 {
   align-items: center;
   justify-content: space-around;
   margin-top: 50px;
+  padding: 10px;
 }
 
 .mainIndex {
@@ -277,6 +280,7 @@ h2 {
 
 .listaServicios span {
   font-weight: bold;
+  text-align: center;
 }
 
 .listaServicios a {
@@ -289,6 +293,21 @@ h2 {
   width: 100%;
   margin-top: 10px;
   box-sizing: border-box;
+}
+
+/* Nosotros ________________________________________________________________________________*/
+
+.contenidoNosotros {
+  background: rgba(68, 150, 49, 0.8);
+  box-shadow: 3px 3px 3px gray;
+  margin-bottom: 10px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.contenidoNosotros h2 {
+  color: white;
+  margin-bottom: 5px;
 }
 
 /* animacion ________________________________________________________________________________*/
@@ -402,6 +421,14 @@ h2 {
 
 /* medias ________________________________________________________________________________*/
 
+@media screen and (max-width:768px) {
+  .listaServicios {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 5px;
+  }
+}
+
 @media screen and (max-width:580px) {
   .menu>li>a {
     flex-direction: column;
@@ -425,6 +452,11 @@ h2 {
   }
   .portada h1 {
     font-size: 1.5em;
+  }
+  .listaServicios {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    margin-top: 5px;
   }
 }
 
